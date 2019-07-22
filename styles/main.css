@@ -1,0 +1,60 @@
+/*
+        CS 125H -Lab 3
+		Filename: main.css
+		
+		Author: Jadon Belezos
+		Date 7/18/2019
+*/
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "comic sans", "Times New Roman", serif;
+	margin: auto;
+	background-color: white; /* For browsers that do not support gradients */
+	width:65%;
+	background-image: -moz-linear-gradient(to bottom right,white 45%,  #ff9999 );
+	background-image: -o-linear-gradient(to bottom right,white 45%,  #ff9999 );
+	background-image: -webkit-linear-gradient(to bottom right,white 45%,  #ff9999 );
+    background-image: linear-gradient(to bottom right,white 45%,  #ff9999 );
+}
+h1 {
+	margin: 0.1em 0 0.5em;
+}
+h3 {
+	font-size:120%
+}
+h4 {
+	font-size: 110%;
+}
+
+.food_list {
+	list-style-type: none;
+}
+
+.food_list:first-child {
+	margin: 1em;
+}
+
+.food_list li {
+	margin: 2em;
+}
+/* trying to get image centered any help would be appreciated */
+.food_list li img { 
+	width:15em;
+	height: auto;
+	max-width:250px;
+    margin: auto;
+}
+
+.food_list li p {
+	width: 75%;
+	margin: auto;
+}
+
+
+
+footer p {
+	font-style: italic;
+}
