@@ -5,22 +5,63 @@
 		Author: Jadon Belezos
 		Date 7/18/2019
 */
+
+/* guide to navigating the css
+
+	the first 50 lines of code are 
+	element selectors which mostly setup layout
+	
+	the second 2 involve selectors that change how lists function 
+	an ideally produce a pleasing layout.
+	
+	
+*/ 
 * {
 	margin: 0;
 	padding: 0;
 }
 body {
 	font-family: "comic sans", "Times New Roman", serif;
-	margin: auto;
 	background-color: white; /* For browsers that do not support gradients */
-	width:65%;
 	background-image: -moz-linear-gradient(to bottom right,white 45%,  #ff9999 );
 	background-image: -o-linear-gradient(to bottom right,white 45%,  #ff9999 );
 	background-image: -webkit-linear-gradient(to bottom right,white 45%,  #ff9999 );
     background-image: linear-gradient(to bottom right,white 45%,  #ff9999 );
 }
+
+nav {
+	float: left;
+	border: 3px solid red;
+	background-color: #ffff99;
+	
+	max-width: 15%;
+	/* this currently being worked on but it will be better in the future!*/
+	min-height: 100vh; /* note this is not percent it is size of screen */
+	
+	margin-right: 2em;
+	margin-left: 1em;
+	padding-top: 2em;
+	
+	
+}
+
+
+nav li {
+	margin: 3em 0;
+	margin: 1.2em;
+}
+
+nav a {
+	font-size: 160%;
+}
+main, header {
+	width:65%;
+	margin: auto;
+}
 h1 {
-	margin: 0.1em 0 0.5em;
+	font-size: 250%;
+	text-decoration:underline;
+	margin: 0.6em 4em 0.5em;
 }
 h3 {
 	font-size:120%
@@ -52,8 +93,6 @@ h4 {
 	width: 75%;
 	margin: auto;
 }
-
-
 
 footer p {
 	font-style: italic;
