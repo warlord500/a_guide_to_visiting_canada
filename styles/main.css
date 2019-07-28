@@ -1,19 +1,20 @@
 /*
-        CS 125H -Lab 3
+        CS 125H -Lab 4
 		Filename: main.css
 		
 		Author: Jadon Belezos
 		Date 7/18/2019
 */
 
-/* guide to navigating the css
+/* Guide To Navigating The CSS
 
-	the first 50 lines of code are 
-	element selectors which mostly setup layout
+	The First 50 Lines Of Code Are 
+	Element Selectors Which Mostly Setup Layout.
 	
-	the second 2 involve selectors that change how lists function 
-	an ideally produce a pleasing layout.
+	The Second 2 Involve Selectors That Change How Lists Function 
+	An Ideally Produce A Pleasing Layout.
 	
+	AT LINE 57 - interactive CSS!!
 	
 */ 
 * {
@@ -21,67 +22,88 @@
 	padding: 0;
 }
 body {
-	font-family: "comic sans", "Times New Roman", serif;
+	font-family: "Comic Sans", "Times New Roman", serif;
 	background-color: white; /* For browsers that do not support gradients */
 	background-image: -moz-linear-gradient(to bottom right,white 45%,  #ff9999 );
 	background-image: -o-linear-gradient(to bottom right,white 45%,  #ff9999 );
 	background-image: -webkit-linear-gradient(to bottom right,white 45%,  #ff9999 );
     background-image: linear-gradient(to bottom right,white 45%,  #ff9999 );
+	text-align: center;
 }
 
 nav {
 	float: left;
 	border: 3px solid red;
 	background-color: #ffff99;
+	text-align: left;
+	
 	
 	max-width: 15%;
-	/* this currently being worked on but it will be better in the future!*/
-	min-height: 100vh; /* note this is not percent it is size of screen */
+	/* This Currently Being Worked On But It Will Be Better In The Future!*/
+	Min-Height: 100vh; /* Note This Is Not Percent It Is Size Of Screen */
 	
 	margin-right: 2em;
 	margin-left: 1em;
 	padding-top: 2em;
-	
-	
 }
 
 
 nav li {
-	margin: 3em 0;
 	margin: 1.2em;
 }
 
 nav a {
 	font-size: 160%;
 }
-main, header {
-	width:65%;
-	margin: auto;
+
+/* Grow the nav links on hover!!*/
+nav a:hover,nav a:focus,a:active {
+	font-size:165%
 }
+
+nav a:link {
+	color: red;
+}
+
+nav a:visited {
+	color: hotpink;
+}
+
 h1 {
 	font-size: 250%;
 	text-decoration:underline;
 	margin: 0.6em 4em 0.5em;
 }
+
 h3 {
-	font-size:120%
+	font-size:125%;
+	text-decoration: bold;
 }
+
 h4 {
 	font-size: 110%;
+}
+
+
+/* SECTION 2 */
+
+.container {
+	width:65%;
+	margin: auto;
 }
 
 .food_list {
 	list-style-type: none;
 }
 
-.food_list:first-child {
-	margin: 1em;
+.food_list li:first-child {
+	padding: 1em;
 }
 
 .food_list li {
-	margin: 2em;
+	padding: 2em;
 }
-/* trying to get image centered any help would be appreciated */
+
 .food_list li img { 
 	width:15em;
 	height: auto;
@@ -92,8 +114,26 @@ h4 {
 .food_list li p {
 	width: 75%;
 	margin: auto;
+	
 }
+
+.source_item {
+	list-style-type: none;
+	margin: 1em;
+	
+}
+.source_item ul {
+	list-style-type: none;
+	padding-top:  0.2em;
+	padding-left: 4em;
+}
+
+
 
 footer p {
 	font-style: italic;
+}
+
+footer {
+	margin: 3em auto;
 }

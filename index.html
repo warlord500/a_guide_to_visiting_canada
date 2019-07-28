@@ -2,7 +2,7 @@
 <html lang="en-us">
 	<head>
 		<!-- 
-		 CS 125H -Lab 2
+		 CS 125H -Lab 4
 		Filename: index.HTML
 		Supporting  files: none
 		
@@ -14,30 +14,45 @@
 		<meta charset="utf-8" lang="en">
 		<meta name="description" content="A guide for good food items and places to see if you visit Canada">
 		<meta name="keywords" content="Canada, food, places, tourism, candy">
+		<link rel="stylesheet" href="styles/normalize.css">
 		<link rel="stylesheet" href="styles/main.css">
-		<meta http-equiv="refresh" content="5">
 	</head>
 	
 	<body>
-		<header>
+		<header class="container">
 			<h1> A Guide to visiting Canada</h1>
 		</header>
 		<nav>
-		<h2>Other Pages You Might Like:</h2>
+			<h2>Other Pages You Might Like:</h2>
 			<ul> 
 				<li> 
 					<a href="incomplete.html">Places To Visit</a>
 				</li>
 				<li>
-					<a href="incomplete.html">Activites To Do</a>
+					<a href="incomplete.html">Activities To Do</a>
 				</li>
+			</ul>
 		</nav>
-		<main>
+		<main class="container">
 				<h2> Different food you can get</h2>
 					
-				<p>There are lots of little treats to get in Canada that you normally can't get in the usa.	
+				<p>There are lots of little treats to get in Canada that you normally can't get in the USA.	
 				The favorites of my family are some of the flavored chips like pickled and ketchup which use to be unavailable to 
-				the usa for a while.  Below is a list of the more common items. </p>
+				the USA for a while.  Below is a list of the more common items. </p>
+				
+				<!--
+					Ok upon prior thought, I realized this code maybe overwhelming with a lot of tags
+					if your a new to reading html. 
+					each Entry in the list follows the below template
+					<li> 
+						<h4>name</h4>
+						<img alt="name" src="images/name.jpg"> 
+						<p> name is good. and cost <a href="http://ridiclous.com/long/url/that/will/drive/you/nuts_but/you/thought/you/were/at/the/end/nope/not/at/all/name.html">amazon</a>
+					</li>
+					
+					
+					A Header and Image allows readers to glance over the page and pick and choose the preceding paragraph to read!
+				-->
 				
 				<ul class="food_list">
 					<li>
@@ -56,7 +71,7 @@
 					</li>
 					<li>
 						<h4>Beaver-Tail</h4>
-						<img alt="Beaver Tail" src="images/Beaver-tail.jpg">
+						<img alt="Beaver Tail" src="images/beaver_tail.jpg">
 						<p> A simple dish, a Pancake like treat, that in many ways is similar to the  famous elephant ears that you might buy at by the nearest beach.
 					</li>
 				</ul>
@@ -68,13 +83,14 @@
 						<p>
 							A classic tradition in Canada is to dip standard French fries in gravy, rather than the American ketchup or ketchup-mayo mix!!
 							Many Canadians pour gravy on top of the fries(shown above). Which really mixes the gravy and fries together!!
-							you can get make these at home, there a few places in a Canada that will make them for you
+							you can get make these at home, there a few places in a Canada that will make them for you!
 						</p>
 					</li>	
+				</ul>
 		</main> 
-		<footer>
-		<p>&copy; Jadon Belezos 2019<p>
-		<p>link to <a href="sources.html">sources</a>
+		<footer class="container">
+			<p>&copy; Jadon Belezos 2019<p>
+			<p>link to <a href="sources.html">sources</a>
 		</footer>
 	</body>
 </html>
