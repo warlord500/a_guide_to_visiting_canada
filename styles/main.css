@@ -1,5 +1,5 @@
 /*
-        CS 125H -Lab 4
+        CS 125H -Lab 5
 		Filename: main.css
 		
 		Author: Jadon Belezos
@@ -23,7 +23,7 @@
 }
 
 body {
-	font-family: "Comic Sans", "Times New Roman", serif;
+	font-family: "Comic Sans MS", cursive, sans-serif;
 	background-color: white; /* For browsers that do not support gradients */
 	background-image: -moz-linear-gradient(to bottom right,white 45%,  #ff9999 );
 	background-image: -o-linear-gradient(to bottom right,white 45%,  #ff9999 );
@@ -32,6 +32,37 @@ body {
 	text-align: center;
 }
 
+h3 {
+	font-size:125%;
+}
+
+h4 {
+	font-size: 110%;
+}
+ul {
+	list-style-type: none;
+}
+
+/* this is where relative positioning is being used!! */
+header img {
+	width: 20%;
+	max-width:400px;
+	height: auto;
+	
+	position: relative;
+	right: 50em;
+	top: 1.5em;
+	
+	border: 1px solid black;
+}
+
+header h1 {
+	font-size: 250%;
+	text-decoration:underline;
+	margin: 0.6em 4em 0.5em;
+}
+
+/*IMPORTANT THIS CONTAINS CODE FOR FLOAT. */
 nav {
 	float: left;
 	border: 3px solid red;
@@ -45,7 +76,7 @@ nav {
 	
 	margin-right: 2em;
 	margin-left: 1em;
-	padding-top: 2em;
+	padding-top: 4em;
 }
 
 
@@ -54,15 +85,17 @@ nav li {
 }
 
 nav a {
+	padding: .1em;
 	font-size: 160%;
+	font-weight: bold;
+	
+	display: block; /* make surronding block clickable */
+	text-decoration: none;
+	
 }
 
-/* Grow the navigation links on hover!!
- I like the default style for anchors on the rest of the page. 	
- those links aren't as important as these ones. 
- changing them for me seems to make them look worse than better. 
-*/
-nav a:hover,nav a:focus,a:active {
+
+nav a:hover,nav a:focus, nav a:active {
 	font-size:165%
 }
 
@@ -74,36 +107,43 @@ nav a:visited {
 	color: hotpink;
 }
 
-h3 {
-	font-size:125%;
+nav a.current {
+	background-color: silver;
 }
 
-h4 {
-	font-size: 110%;
+main {
+	width: 65%;
+	margin: auto;
 }
-
 
 /* SECTION 2 */
 /* Rachel made comment about title should change color
 	currently unsure of what to change to!
+	
+	
+	To understand my reasoning for using 
+	the class selectors rather than, simply element selectors.
+	I believe it gives the element I am referring to be understood with its purpose within, 
+	the web page, there maybe more ul that I put in the page later. 
+	that I dont want to be referenced the same as 
+	food_list
 */
-#main_title {
-	font-size: 250%;
-	text-decoration:underline;
-	margin: 0.6em 4em 0.5em;
-}
 
-.container {
-	width:65%;
-	margin: auto;
-}
 
-.food_list {
-	list-style-type: none;
+#banner {
+	width: 10%;
+	padding: 0.5em;
+	
+	
+	position:fixed;
+	top:1.5em;
+	right:1em;
+	
+	border: 3px double red;
 }
 
 .food_list li:first-child {
-	margin: 1.5em;
+	margin-top: 1.5em;
 }
 
 .food_list li {
@@ -116,13 +156,18 @@ h4 {
 	/* This is so that backgrounds don't overwrite borders */
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+	
+	
 }
 
 .food_list li img { 
 	width:15em;
 	height: auto;
+	
 	max-width:250px;
-    margin: auto;
+		
+	border: 2px dotted rgb(127, 0, 0); /* this is in case some browser don't support alpha channel*/
+    border: 2px dotted rgba(255, 0, 0, .5);
 }
 
 .food_list li p {
@@ -133,23 +178,25 @@ h4 {
 /* some items more specific to sources page. */ 
 
 .source_item {
-	list-style-type: none;
+	
 	margin: 1em;
 	
 }
 .source_item ul {
-	list-style-type: none;
+	list-style-type: dotted;
 	padding-top:  0.2em;
 	padding-left: 4em;
 }
 
 
 /* remaining styles for the footer */
+footer {
+	clear: both;
+	margin: 3em auto;
+	
+}
 
 footer p {
 	font-style: italic;
 }
 
-footer {
-	margin: 3em auto;
-}
