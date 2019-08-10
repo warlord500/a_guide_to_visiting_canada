@@ -177,12 +177,12 @@ main {
 }
 /* some items more specific to sources page. */ 
 
-.source_item {
+#source_list li {
 	
 	margin: 1em;
 	
 }
-.source_item ul {
+#source_list li ul {
 	list-style-type: dotted;
 	padding-top:  0.2em;
 	padding-left: 4em;
