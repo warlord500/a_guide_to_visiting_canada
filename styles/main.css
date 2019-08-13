@@ -1,9 +1,9 @@
 /*
-        CS 125H -Lab 5
+        CS 125H -Lab 6
 		Filename: main.css
 		
 		Author: Jadon Belezos
-		Date 7/18/2019
+		Date 8/13/2019
 */
 
 /* Guide To Navigating The CSS
@@ -24,12 +24,15 @@
 
 body {
 	font-family: "Comic Sans MS", cursive, sans-serif;
-	background-color: white; /* For browsers that do not support gradients */
-	background-image: -moz-linear-gradient(to bottom right,white 45%,  #ff9999 );
-	background-image: -o-linear-gradient(to bottom right,white 45%,  #ff9999 );
-	background-image: -webkit-linear-gradient(to bottom right,white 45%,  #ff9999 );
-    background-image: linear-gradient(to bottom right,white 45%,  #ff9999 );
 	text-align: center;
+	width:90%;
+	margin: auto;
+
+	background-color: #a39b8b; /* For browsers that do not support gradients */
+	/* background-image: -moz-linear-gradient(to bottom right,white 45%,  #ff9999 );
+	background-image: -o-linear-gradient(to bottom right,white 45%,  #ff9999 );
+	background-image: -webkit-linear-gradient(to bottom right,white 45%,  #ff9999 );  */
+    background-image: linear-gradient(to bottom right,#a39b8b 45%,  #ff9999 );
 }
 
 h3 {
@@ -38,20 +41,24 @@ h3 {
 
 h4 {
 	font-size: 110%;
+	margin-bottom: 1em;
 }
 ul {
 	list-style-type: none;
 }
 
-/* this is where relative positioning is being used!! */
+header {
+	text-align: left;
+}
+
 header img {
 	width: 20%;
 	max-width:400px;
 	height: auto;
 	
 	position: relative;
-	right: 50em;
 	top: 1.5em;
+	left: 1em;
 	
 	border: 1px solid black;
 }
@@ -59,24 +66,27 @@ header img {
 header h1 {
 	font-size: 250%;
 	text-decoration:underline;
-	margin: 0.6em 4em 0.5em;
+	text-align: center;
+	
+	
+    margin-bottom: 0.4em;
 }
 
 /*IMPORTANT THIS CONTAINS CODE FOR FLOAT. */
 nav {
 	float: left;
-	border: 3px solid red;
+	
 	background-color: #ffff99;
 	text-align: left;
+	min-height: 100vh; /* Note This Is Not Percent It Is Size Of Screen */
 	
-	
-	max-width: 15%;
-	/* This Currently Being Worked On But It Will Be Better In The Future!*/
-	Min-Height: 100vh; /* Note This Is Not Percent It Is Size Of Screen */
-	
+	padding-left: 0.5 em;
+	border: 3px solid red;
 	margin-right: 2em;
+	margin-left: 2em;
+}
+nav h2 {
 	margin-left: 1em;
-	padding-top: 4em;
 }
 
 
@@ -85,12 +95,12 @@ nav li {
 }
 
 nav a {
-	padding: .1em;
+	display: block; /* make surrounding block click-able */
 	font-size: 160%;
 	font-weight: bold;
-	
-	display: block; /* make surronding block clickable */
+
 	text-decoration: none;
+	padding: .1em;
 	
 }
 
@@ -114,6 +124,7 @@ nav a.current {
 main {
 	width: 65%;
 	margin: auto;
+	padding: 1em;
 }
 
 /* SECTION 2 */
@@ -142,16 +153,22 @@ main {
 	border: 3px double red;
 }
 
+.food_list {
+	padding: 0;
+	width: 80%;
+	margin: auto;
+	
+}
 .food_list li:first-child {
 	margin-top: 1.5em;
 }
 
 .food_list li {
-	padding: 2em;
-	margin: 1em; /*should margin collapse */
+	padding: 3em 0em; 
+	margin: 1em; /*should margin collapse */ 
 	
-	border: 2px dotted rgb(127, 0, 0); /* this is in case some browser don't support alpha channel*/
-    border: 2px dotted rgba(255, 0, 0, .5);
+	border: 2px dotted rgb(93,183,222); /* in case don't support alpha channel*/
+    border: 2px dotted rgb(93,183,222,0.5); 
 	
 	/* This is so that backgrounds don't overwrite borders */
     -webkit-background-clip: padding-box; /* for Safari */
@@ -166,8 +183,8 @@ main {
 	
 	max-width:250px;
 		
-	border: 2px dotted rgb(127, 0, 0); /* this is in case some browser don't support alpha channel*/
-    border: 2px dotted rgba(255, 0, 0, .5);
+	border: 2px dotted rgb(93,183,222); /* in case some  don't support alpha channel*/
+     border: 2px dotted rgb(93,183,222,0.5); 
 }
 
 .food_list li p {
