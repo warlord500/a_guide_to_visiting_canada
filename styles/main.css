@@ -11,7 +11,7 @@
 	The First 50 Lines Of Code Are 
 	Element Selectors Which Mostly Setup Layout.
 	
-	The Second 2 Involve Selectors That Change How Lists Function 
+	The  2 Involve Selectors That Change How Lists Function 
 	An Ideally Produce A Pleasing Layout.
 	
 	AT LINE 57 - interactive CSS!!
@@ -23,25 +23,23 @@
 }
 
 body {
+	font-size:100%;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	text-align: center;
-	width:90%;
+	width:80%;
 	margin: auto;
 
 	background-color: white; /* For browsers that do not support gradients */
-	background-image: -moz-linear-gradient(to bottom right,white 45%,  #ff9999 );
-	background-image: -o-linear-gradient(to bottom right,white 45%,  #ff9999 );
-	background-image: -webkit-linear-gradient(to bottom right,white 45%,  #ff9999 );
     background-image: linear-gradient(to bottom right,white 45%,  #ff9999 );
 }
-/*  */
+
 h3 {
 	font-size:125%;
 }
 
 h4 {
 	font-size: 110%;
-	margin-bottom: 1em;
+	
 }
 ul {
 	list-style-type: none;
@@ -62,14 +60,11 @@ header {
 }
 
 header img {
+	float:left;
+	
 	width: 10%;
 	max-width:400px;
 	height: auto;
-	
-   /*  position: relative;
-	top: 1.5em;
-	left: 1em;  */
-	float:left;
 	
 	border: 1px solid black;
 }
@@ -83,29 +78,32 @@ header h1 {
     margin-bottom: 0.4em;
 }
 
-/*IMPORTANT THIS CONTAINS CODE FOR FLOAT. */
 nav {
 	clear:left;
 	float: left;
 	width:20%;
 	background-color: #ffff99;
-	min-height: 100vh; /* Note This Is Not Percent It Is Size Of Screen */
+	overflow: auto;
 	
-	padding-left: 0.5em;
+	padding-right: 0.5em;
 	border: 3px solid red;
-	margin-right: 2em;
-	margin-left: 2em;
+	margin-right: 1em;
+}
+nav ul {
+	width: 100%;
+	height: 100%;
 }
 
 
 nav li {
-	margin: .5em;
+	padding: .5em;
 }
 
 nav a {
 	display: block; /* make surrounding block click-able */
 	font-size: 160%;
 	font-weight: bold;
+	text-align: center;
 
 	text-decoration: none;
 	padding: .1em;
@@ -129,10 +127,24 @@ nav a.current {
 	background-color: silver;
 }
 
+
+
+div#banner {
+	width: 10%;
+	padding: 0.5em;
+	
+	
+	position:fixed;
+	top:1.5em;
+	right:0.5em;
+	
+	border: 3px double red;
+}
+
 main {
 	width: 65%;
 	margin: auto;
-	padding: 1em;
+	padding: 0;
 }
 
 /* SECTION 2 */
@@ -149,29 +161,18 @@ main {
 */
 
 
-#banner {
-	width: 10%;
-	padding: 0.5em;
-	
-	
-	position:fixed;
-	top:1.5em;
-	right:1em;
-	
-	border: 3px double red;
-}
-
-.food_list {
-	padding: 0;
+ul.food_list {
 	width: 80%;
+	padding: 0;
+	
 	margin: auto;
 	
 }
-.food_list li:first-child {
+ul.food_list li:first-child {
 	margin-top: 1.5em;
 }
 
-.food_list li {
+ul.food_list li {
 	padding: 3em 0em; 
 	margin: 1em; /*should margin collapse */ 
 	
@@ -179,42 +180,51 @@ main {
     border: 2px dotted rgba(255, 0, 0, .5);
 	
 	/* This is so that backgrounds don't overwrite borders */
-    -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 	
 }
-.food_list  p {
-	width: 75%;
-	margin: auto;
-	
+
+ul.food_list img {
+	width: 40%;
+	height: auto;
 }
 
-#place_list {
+ul.food_list  p {
+	width: 75%;
+	margin: auto;	
+}
+
+/* place_act_list styles */
+
+ul.place_act_list {
 	width: 80%;
 	margin: auto;
 	text-align: left;
 }
-#place_list li {
+ul.place_act_list li {
 	padding: 1em;
 	margin-top: 2em;
 	margin-bottom: 2em;
 	border: 2px dotted rgb(127, 0, 0); /* this is in case some browser don't support alpha channel*/
     border: 2px dotted rgba(255, 0, 0, .5);
+	overflow: auto; /* this is to prevent image overflowing the li */
 }
 
-#place_list img {
+ul.place_act_list img {
 	float: left;
+	width: 40%;
+	min-width: 100px;
 	
 }
 
 /* some items more specific to sources page. */ 
 
-#source_list li {
+ul#source_list li {
 	
 	margin: 1em;
 	
 }
-#source_list li ul {
+ul#source_list li ul {
 	list-style-type: dotted;
 	padding-top:  0.2em;
 	padding-left: 4em;
@@ -232,20 +242,57 @@ footer p {
 	font-style: italic;
 }
 
-@media only screen and (max-width: 767px){
+/* these are the media queries so that web page better fits 
+	the smaller devices!!
+	*/
+
+@media only screen and (max-width: 768px){
 	body {
-		font-size:110%;
-	}
-	
-	header img {
-		width: 7.5%;
+		font-size:70%;
 	}
 	
 	#banner {
 		display: none;
 	}
+	
 	nav {
-		font-size: 75%;
+		float: none;
+		width: 95%;
+		
+		background: none;
+		border: none;
 	}
 	
+	nav li {
+		float: left;
+		max-width: 25%;
+		margin: .5em;
+		background: none;
+		border: 3px solid red;
+	}
+	
+	nav ul:last-child li {
+		width: 100%;
+		margin: none;
+	}
+	
+	nav a {
+		font-size:80%;
+	}
+
+	main {
+		width: 100%;
+	}
+	
+	ul.place_act_list img {
+		float: none;
+		width: 90%;
+	}
 }
+
+@media only screen and (max-width: 530px){
+	ul li { 
+		margin: .1em; 
+	}
+}
+
